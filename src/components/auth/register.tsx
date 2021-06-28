@@ -94,21 +94,29 @@ const Register = () => {
                     <TextField fullWidth label='Email' placeholder="Enter your email"
                         name={email}
                         value={email}
-                        onChange={e => setEmail(e.target.value)} />
-                    <FormHelperText style={errorStyle}>{errors.email ? errors.email : ""}</FormHelperText>
+                        onChange={e => setEmail(e.target.value)}
+                        error={errors.email ? true : false}
+                        helperText={errors.email ? errors.email : ""}
+                    />
 
                     <TextField fullWidth label='Password' placeholder="Enter your password"
+                        type='password'
                         name={password}
                         value={password}
-                        onChange={e => setPassword(e.target.value)} />
-                    <FormHelperText style={errorStyle}>{errors.password ? errors.password : ""}</FormHelperText>
-
+                        onChange={e => setPassword(e.target.value)}
+                        error={errors.password ? true : false}
+                        helperText={errors.password ? errors.password : ""}
+                    />
 
                     <TextField fullWidth label='Confirm Password' placeholder="Confirm your password"
+                        type='password'
                         name={cPassword}
                         value={cPassword}
-                        onChange={e => setCPassword(e.target.value)} />
-                    <FormHelperText style={errorStyle}>{errors.cPassword ? errors.cPassword : ""}</FormHelperText>
+                        onChange={e => setCPassword(e.target.value)}
+                        error={errors.cPassword ? true : false}
+                        helperText={errors.cPassword ? errors.cPassword : ""}
+                    />
+
 
 
                     <Button type='submit' variant='contained' color='primary' style={marginTopSmall} fullWidth onClick={handleRegister}>Sign up</Button>

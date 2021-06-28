@@ -1,5 +1,7 @@
 This is a simple Authentication project using React written on Typescript. It uses Redux thunk for managing application state and browser localStorage for database.
 
+Live link: https://auth-typescript-task.herokuapp.com/
+
 Steps to run:
 
 1. Clone the repo
