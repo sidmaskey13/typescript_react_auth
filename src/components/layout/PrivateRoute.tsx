@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 interface PrivateRouteProps extends RouteProps { }
 
 export const PrivateRoute: React.FC<PrivateRouteProps> =
-    ({ component: Component, ...rest }) => {
+    ({ ...rest }) => {
         const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated)
 
         if (!isAuthenticated) {
