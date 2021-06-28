@@ -28,6 +28,8 @@ export const loginSuccess = (data: { email: string, password: string }) => {
 
 export const logoutSuccess = () => {
     return (dispatch: Dispatch<Action>) => {
+        toast.success('LogOut Success');
+
         dispatch({
             type: ActionType.LOGOUT_SUCCESS
         })

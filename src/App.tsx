@@ -8,6 +8,7 @@ import Dashboard from './components/layout/dashboard';
 import Register from './components/auth/register';
 import Notifications from './components/layout/notifications';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './components/layout/PrivateRoute'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
           </Switch>
         </div>
       </Router>
