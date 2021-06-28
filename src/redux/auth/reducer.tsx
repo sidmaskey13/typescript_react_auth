@@ -49,7 +49,7 @@ export default function (state = INITIAL_STATE, action: Action) {
             localStorage.setItem('allUserData', JSON.stringify(list))
             return {
                 ...state,
-                isAuthenticated: true,
+                isAuthenticated: false,
             };
 
         default:
